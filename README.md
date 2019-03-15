@@ -1,3 +1,3 @@
 # Codes for Numerical  Analysis
 
-matlab works
+matlab works for lec numerical analysis
