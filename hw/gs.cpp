@@ -15,6 +15,7 @@ double a[MAXN][MAXN];///系数矩阵
 double b[MAXN],x[MAXN];///右端项及解
 int n,N;///n元方程组，最大迭代N次
 double eps;///误差限
+double w = 1; //for SOR
 int main()
 {
     int ok,cur;///cur表示迭代结束所执行的最后一步
@@ -39,6 +40,7 @@ int main()
                     x[i] -= x[j]*a[i][j];
                 }
                 x[i] /= a[i][i];
+                x[i] = w*x[i] + (1-w)*xx;
                 if(maxs < fabs(x[i] - xx))maxs = fabs(x[i] - xx);
             }
             if(maxs < eps){ok = 1;cur = k;break;}
