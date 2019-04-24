@@ -1,7 +1,8 @@
-n=10;
+n=12;
+delta = zeros(n,1);
 H = Hilbert(n);
 x = ones(n,1);
-b = H*x;
+b = H*x + delta;
 L = cholesky(H,n);
 x_hat = solve_x(L,b,n);
 r = b - H*x_hat;
