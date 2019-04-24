@@ -1,5 +1,6 @@
-n=12;
+n=8;
 delta = zeros(n,1);
+delta(1:n) = 1e-7;
 H = Hilbert(n);
 x = ones(n,1);
 b = H*x + delta;
