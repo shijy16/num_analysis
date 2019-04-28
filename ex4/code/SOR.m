@@ -1,5 +1,5 @@
 function [x]=SOR(A,b,n)
-w = 1.56;
+w = 0.5;
 x = ones(n,1);
 x_2 = zeros(n,1);
 sor_cnt = 0;
